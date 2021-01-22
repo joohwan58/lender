@@ -3,6 +3,7 @@ public class Loan {
     private int amount;
     private boolean isPaid;
     private double interestRate;
+    private static int maxLoan = 0;
 
     public Loan(String borrower, int amount, double interestRate) {
         this.borrower = borrower;
@@ -30,4 +31,6 @@ public class Loan {
     public double getProfit() {
         return amount * interestRate;
     }
+
+    public static int getMaxLoan() {return maxLoan;}
 }
